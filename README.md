@@ -7,7 +7,7 @@
 ## To run it locally
 1. `$ make install`
 2. `$ make start`
-3. visit `http://localhost:9090`
+3. visit `http://localhost:3000`
 
 ## Reference
 1. [Webpack](https://webpack.github.io/docs)
