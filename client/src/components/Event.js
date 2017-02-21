@@ -6,8 +6,20 @@ const propTypes = {
 };
 
 class Event extends Component {
+  tagClassName() {
+    const { severity } = this.props.event;
+
+    if (severity > 6) {
+      return 'tag--red';
+    } else if (severity > 3) {
+      return 'tag--orange';
+    }
+
+    return 'tag--green';
+  }
+
   render() {
-    const { description, name, timestamp } = this.props.event;
+    const { description, name, severity, timestamp } = this.props.event;
 
     return (
       <div className="event">
@@ -15,12 +27,17 @@ class Event extends Component {
           <div className="event__name">
             {name}
           </div>
+          <div className="event__severity">
+            <div className={`tag ${this.tagClassName()}`}>
+              {`Severity ${severity}`}
+            </div>
+          </div>
         </div>
         <div className="event__description">
           {description}
         </div>
         <div className="event__time">
-          {moment(timestamp, 'X').fromNow()}
+          {`Created ${moment(timestamp, 'X').fromNow()}`}
         </div>
       </div>
     );

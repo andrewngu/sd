@@ -10,9 +10,17 @@
 }
 
 .event__header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
   border-bottom: 1px solid #e3e3e3;
   padding-bottom: 12px;
   margin-bottom: 12px;
+}
+
+.event__severity {
+  flex: 1;
+  text-align: right;
 }
 
 .event__name {
