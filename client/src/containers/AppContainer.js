@@ -1,12 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import App from '../components/App';
 
 
 class AppContainer extends Component {
   render() {
-    return (
-      <div>hi</div>
-    );
+    return <App {...this.props} />;
   }
 }
 

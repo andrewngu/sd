@@ -6,7 +6,7 @@ module.exports = {
   entry: {
     main: [
       './client/src/index.js',
-      'webpack-dev-server/client?http://localhost:9090',
+      'webpack-dev-server/client?http://localhost:3000',
       'webpack/hot/only-dev-server',
     ],
   },
@@ -29,7 +29,7 @@ module.exports = {
   plugins: [ignore],
   devServer: {
     host: '0.0.0.0',
-    port: '9090',
+    port: '3000',
     proxy: {
     },
   },

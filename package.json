@@ -1,8 +1,8 @@
 {
-  "name": "boomin",
+  "name": "ui-scaffold",
   "version": "1.0.0",
   "main": "client/src/index.js",
-  "repository": "git@github.com:andrewngu/boomin.git",
+  "repository": "git@github.com:andrewngu/ui-scaffold.git",
   "license": "UNLICENSED",
   "dependencies": {
     "babel-polyfill": "^6.22.0",
