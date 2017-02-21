@@ -1,6 +1,6 @@
 import * as types from '../constants/ActionTypes';
 
-const initalState = {
+const initialState = {
   error: null,
   isFetching: false,
   items: [],
@@ -8,13 +8,13 @@ const initalState = {
 
 export default function events(state = initialState, action) {
   switch (action.type) {
-    case FETCH_EVENTS_ERROR:
+    case types.FETCH_EVENTS_ERROR:
       return { ...state, error: action.error, isFetching: false };
 
-    case FETCH_EVENTS_REQUEST:
+    case types.FETCH_EVENTS_REQUEST:
       return { ...state, error: null, isFetching: true };
 
-    case FETCH_EVENTS_SUCCESS:
+    case types.FETCH_EVENTS_SUCCESS:
       return { ...state, isFetching: false, items: action.items };
 
     default:
