@@ -8,9 +8,28 @@ const propTypes = {
 };
 
 class EventsContainer extends Component {
+  constructor() {
+    super();
+    this.interval = null;
+  }
+
+  componentDidMount() {
+    this.interval = setInterval(() => {
+      const { dispatch } = this.props;
+      dispatch(fetchEventsIfNeeded());
+    }, 30000);
+  }
+
   componentWillMount() {
     const { dispatch } = this.props;
     dispatch(fetchEventsIfNeeded());
+  }
+
+  componentWillUnmount() {
+    if (this.interval) {
+      clearInterval(this.interval);
+      this.interval = null;
+    }
   }
 
   render() {
