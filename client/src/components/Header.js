@@ -6,7 +6,7 @@ class Header extends Component {
       <div className="header">
         <div className="header__inner container">
           <div className="header__logo">
-            <img src="/assets/sysdig_white.png" />
+            <img alt="Sysdig Logo" src="/assets/sysdig_white.png" />
           </div>
         </div>
       </div>

@@ -1,0 +1,46 @@
+.button {
+  display: inline-block;
+  min-width: 100px;
+  padding: 8px 12px;
+  color: #222;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #c7c7c7;
+  border-radius: 2px;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  vertical-align: top;
+
+  > i {
+    margin-right: 6px;
+
+    &.ion-chevron-right {
+      margin-right: 0;
+      margin-left: 6px;
+    }
+  }
+
+  &:hover {
+    background-color: #fafafa;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.button--blue {
+  background-color: $blue;
+  border-color: darken($blue, 20%);
+  color: #fff;
+
+  &:hover {
+    background-color: darken($blue, 10%);
+    color: #fff;
+  }
+
+  &:active {
+    background-color: darken($blue, 20%);
+    color: #fff;
+  }
+}

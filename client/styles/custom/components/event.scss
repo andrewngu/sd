@@ -1,0 +1,24 @@
+.event {
+  width: 500px;
+  background-color: #fff;
+  border: 1px solid #e3e3e3;
+  padding: 12px;
+
+  & + .event {
+    margin-top: 12px;
+  }
+}
+
+.event__header {
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.event__name {
+  font-size: 18px;
+}
+
+.event__time {
+  color: #888;
+}

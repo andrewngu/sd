@@ -1,0 +1,26 @@
+.events {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.events__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.events__header__text {
+  font-size: 24px;
+}
+
+.events__header__actions {
+  flex: 1;
+  text-align: right;
+}
+
+.events__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 48px;
+}

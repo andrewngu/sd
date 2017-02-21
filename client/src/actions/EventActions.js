@@ -35,10 +35,10 @@ function fetchEventsRequest() {
   };
 }
 
-function fetchEventsSuccess(items) {
+function fetchEventsSuccess(json) {
   return {
     type: types.FETCH_EVENTS_SUCCESS,
-    items,
+    items: json.events,
   };
 }
 

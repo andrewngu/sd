@@ -11,7 +11,7 @@ module.exports = {
     ],
   },
   output: {
-    publicPath: 'http://localhost:9090/',
+    publicPath: 'http://localhost:3000/',
     filename: '/js/[name].js',
   },
   module: {
