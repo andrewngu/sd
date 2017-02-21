@@ -1,0 +1,18 @@
+.spinner {
+  display: inline-block;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: .25rem solid #ccc;
+  border-top-color: $blue;
+  animation: spin 750ms infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

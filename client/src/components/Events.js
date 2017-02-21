@@ -1,13 +1,27 @@
 import React, { Component, PropTypes } from 'react';
+import { fetchEventsIfNeeded } from '../actions/EventActions';
 import Event from '../components/Event';
+import Spinner from '../components/Spinner';
 
 const propTypes = {
+  dispatch: PropTypes.func.isRequired,
   events: PropTypes.object.isRequired,
 };
 
 class Events extends Component {
+  constructor() {
+    super();
+    this.handleRefresh = this.handleRefresh.bind(this);
+  }
+
+  handleRefresh(e) {
+    e.preventDefault();
+    const { dispatch } = this.props;
+    dispatch(fetchEventsIfNeeded());
+  }
+
   render() {
-    const { items } = this.props.events;
+    const { isFetching, items } = this.props.events;
 
     return (
       <div className="events container">
@@ -16,8 +30,8 @@ class Events extends Component {
             Events
           </div>
           <div className="events__header__actions">
-            <a className="button button--blue" href="#">
-              Refresh
+            <a className={`button button--blue ${isFetching ? 'button--disabled' : ''}`} href="#" onClick={this.handleRefresh}>
+              {isFetching ? <Spinner size={14} /> : 'Refresh' }
             </a>
           </div>
         </div>
